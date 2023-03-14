@@ -36,7 +36,7 @@ func main() {
 
 	// ‘Step’ 1: Defina o retorno de chamada que especifica a sequência de operações a serem executadas na transação
 	callback := func(sessCtx mongo.SessionContext) (interface{}, error) {
-		// Importantante: Deve passar sessCtx como parâmetro Context para as operações para serem executadas na
+		// Importante: Deve passar sessCtx como parâmetro Context para as operações para serem executadas na
 		// transação
 		if _, err := fooColl.InsertOne(sessCtx, bson.D{{"abc", 1}}); err != nil {
 			return nil, err
