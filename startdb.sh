@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# Create a Docker Network
-docker network create mongoCluster
-
-sleep 2
-
 # Start MongoDB Instances
 docker run -d --rm -p 27017:27017 --name mongo1 --network mongoCluster mongo:4.4 mongod --replSet myReplicaSet --bind_ip localhost,mongo1 \
   && docker run -d --rm -p 27018:27017 --name mongo2 --network mongoCluster mongo:4.4 mongod --replSet myReplicaSet --bind_ip localhost,mongo2 \
