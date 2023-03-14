@@ -11,7 +11,7 @@
 $ ./startdb.sh
 ```
 
-### Verify your Replica Set
+### Verify the Replica Set
 
 ```
 $ docker exec -it mongo1 mongo --eval "rs.status()"
