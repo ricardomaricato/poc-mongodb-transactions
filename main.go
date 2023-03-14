@@ -10,8 +10,7 @@ import (
 )
 
 func main() {
-	// CONTAINER ID d676613d75d4 cfd813862e19 885b25b18322
-	// Define a URI de conexão com o cluster MongoDB
+	// Define a URI de conexão com o ‘cluster’ MongoDB
 	uri := "mongodb://mongo1:27017,mongo2:27017,mongo3:27017/?replicaSet=myReplicaSet"
 
 	// Define as opções de conexão
